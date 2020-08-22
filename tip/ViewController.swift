@@ -14,17 +14,39 @@ class ViewController: UIViewController {
     @IBOutlet weak var billAmountTextField: UITextField!
     @IBOutlet weak var tipPercentageLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    let defaults = UserDefaults.standard
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        // on load, sets percent slider to previously saved default
+        update_percent(0)
         // Do any additional setup after loading the view.
     }
+    
+// The function below was origionally implimented inorder to update
+// the slider if the default percent was changed. I decided that this
+// was not wanted behavior, and removed it. That said, the code works.
+// https://developer.apple.com/documentation/uikit/
+// uiviewcontroller/1621423-viewdidappear
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        if (defaults.integer(forKey: "default_changed") > 0) {
+//            update_percent(0)
+//            defaults.set(0, forKey: "default_changed")
+//            defaults.synchronize()
+//        }
+//    }
+    
+    func update_percent(_ sender: Any) {
+        // get default slider value, and set slider
+        let default_index = defaults.integer(forKey: "defaultindex")
+        tipControl.selectedSegmentIndex = default_index
+    }
+    
     @IBAction func onTap(_ sender: Any) {
     }
     
     @IBAction func calculateTip(_ sender: Any) {
-        
         // Get initial bill amount and calculate tip
         let bill = Double(billAmountTextField.text!) ?? 0
         let tipPercentages = [0.15, 0.18, 0.2]
@@ -37,6 +59,4 @@ class ViewController: UIViewController {
         tipPercentageLabel.text = String(format: "$%.2f", tip)
         totalLabel.text = String(format: "$%.2f", total)
     }
-
-    
 }

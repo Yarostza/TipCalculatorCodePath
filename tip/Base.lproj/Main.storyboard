@@ -82,7 +82,7 @@
                     <navigationItem key="navigationItem" title="Tip Calculator" id="zBr-sD-501">
                         <barButtonItem key="rightBarButtonItem" title="Settings" id="vaR-pd-yFc">
                             <connections>
-                                <segue destination="mD0-dp-aj6" kind="push" id="lhd-zo-cog"/>
+                                <segue destination="mD0-dp-aj6" kind="push" identifier="" id="lhd-zo-cog"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -119,18 +119,33 @@
                                     <segment title="20%"/>
                                 </segments>
                                 <connections>
-                                    <action selector="calculateTip:" destination="BYZ-38-t0r" eventType="valueChanged" id="M2E-Rd-fDi"/>
+                                    <action selector="default_selection:" destination="mD0-dp-aj6" eventType="valueChanged" id="pEV-Vp-ObI"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default Tip" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G0n-yZ-fgN">
+                                <rect key="frame" x="32" y="121" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="rxo-xV-Aeo"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="ljd-ff-lYr"/>
+                    <connections>
+                        <outlet property="TipDefaultControl" destination="Ojh-1G-F8l" id="W2B-WL-Jbh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uah-rT-S61" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lrW-sn-XiB">
+                    <connections>
+                        <action selector="onTap:" destination="mD0-dp-aj6" id="TKD-T7-ZPi"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="6427" y="123"/>
+            <point key="canvasLocation" x="6426.0869565217399" y="122.54464285714285"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HO7-Nl-N3g">

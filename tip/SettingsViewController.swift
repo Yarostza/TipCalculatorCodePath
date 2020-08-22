@@ -9,22 +9,33 @@
 import UIKit
 
 class SettingsViewController: UIViewController {
+    @IBOutlet weak var TipDefaultControl: UISegmentedControl!
+     let defaults = UserDefaults.standard
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Below loads in and sets the default tip value from earlier entry
+        let default_index = defaults.integer(forKey: "defaultindex")
+        TipDefaultControl.selectedSegmentIndex = default_index
         // Do any additional setup after loading the view.
     }
+   
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func onTap(_ sender: Any) {
     }
-    */
+    
+    @IBAction func default_selection(_ sender: Any) {
+        
+        // grab new slection
+        let slide_index = TipDefaultControl.selectedSegmentIndex
+        defaults.set(slide_index, forKey: "defaultindex")
+        
+        // the code snipit below was origionally used to let me know if the
+        // default had been changed. I removed this behavior.
+        
+        //defaults.set(1, forKey: "default_changed")
+        
+        defaults.synchronize()
+    }
 
 }

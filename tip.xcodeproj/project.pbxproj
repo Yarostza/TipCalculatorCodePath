@@ -16,6 +16,8 @@
 		1A280E7324E700CA00E2EE0E /* tipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A280E7224E700CA00E2EE0E /* tipTests.swift */; };
 		1A280E7E24E700CA00E2EE0E /* tipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A280E7D24E700CA00E2EE0E /* tipUITests.swift */; };
 		1A280E8E24ED540200E2EE0E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A280E8D24ED540200E2EE0E /* SettingsViewController.swift */; };
+		54C4BDFF24F1A3980051E328 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A280E8D24ED540200E2EE0E /* SettingsViewController.swift */; };
+		54C4BE0024F1A3980051E328 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A280E8D24ED540200E2EE0E /* SettingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -274,6 +276,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A280E7324E700CA00E2EE0E /* tipTests.swift in Sources */,
+				54C4BDFF24F1A3980051E328 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A280E7E24E700CA00E2EE0E /* tipUITests.swift in Sources */,
+				54C4BE0024F1A3980051E328 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
