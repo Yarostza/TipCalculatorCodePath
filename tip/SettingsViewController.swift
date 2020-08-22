@@ -25,16 +25,11 @@ class SettingsViewController: UIViewController {
     }
     
     @IBAction func default_selection(_ sender: Any) {
-        
-        // grab new slection
+        // grab new selection
         let slide_index = TipDefaultControl.selectedSegmentIndex
         defaults.set(slide_index, forKey: "defaultindex")
-        
-        // the code snipit below was origionally used to let me know if the
-        // default had been changed. I removed this behavior.
-        
-        //defaults.set(1, forKey: "default_changed")
-        
+        // if the default has been changed, set default changed to 1
+        defaults.set(1, forKey: "default_changed")
         defaults.synchronize()
     }
 

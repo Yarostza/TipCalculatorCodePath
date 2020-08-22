@@ -23,19 +23,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-// The function below was origionally implimented inorder to update
-// the slider if the default percent was changed. I decided that this
-// was not wanted behavior, and removed it. That said, the code works.
+// The function below updates
+// the slider if the default percent was changed.
 // https://developer.apple.com/documentation/uikit/
 // uiviewcontroller/1621423-viewdidappear
     
-//    override func viewWillAppear(_ animated: Bool) {
-//        if (defaults.integer(forKey: "default_changed") > 0) {
-//            update_percent(0)
-//            defaults.set(0, forKey: "default_changed")
-//            defaults.synchronize()
-//        }
-//    }
+    override func viewWillAppear(_ animated: Bool) {
+        if (defaults.integer(forKey: "default_changed") > 0) {
+            update_percent(0)
+            defaults.set(0, forKey: "default_changed")
+            defaults.synchronize()
+        }
+    }
     
     func update_percent(_ sender: Any) {
         // get default slider value, and set slider
