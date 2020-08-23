@@ -53,6 +53,8 @@ class ViewController: UIViewController {
         tipControl.selectedSegmentIndex = default_index
     }
     
+    // The following function changes the color theme and saves it. I used:
+    // https://www.youtube.com/watch?v=2WWUKsEPc1A as a guide.
     func update_theme(_ sender: Any) {
         switch defaults.integer(forKey: "defaulttheme") {
         case 0:
