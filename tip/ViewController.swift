@@ -20,6 +20,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // on load, sets percent slider to previously saved default
         update_percent(0)
+        // the code below opens the keyboard by making the bill amount
+        // the first responder. I used the following link to learn this function:
+        // https://developer.apple.com/documentation/uikit/uitextfield
+        billAmountTextField.becomeFirstResponder()
         // Do any additional setup after loading the view.
     }
     
