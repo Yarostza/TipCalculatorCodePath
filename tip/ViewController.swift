@@ -20,6 +20,8 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // on load, sets percent slider to previously saved default
         update_percent(0)
+        // on load, set color theme based on saved default
+        update_theme(0)
         // the code below opens the keyboard by making the bill amount
         // the first responder. I used the following link to learn this function:
         // https://developer.apple.com/documentation/uikit/uitextfield
@@ -38,12 +40,30 @@ class ViewController: UIViewController {
             defaults.set(0, forKey: "default_changed")
             defaults.synchronize()
         }
+        if (defaults.integer(forKey: "theme_changed") > 0) {
+            update_theme(0)
+            defaults.set(0, forKey: "theme_changed")
+            defaults.synchronize()
+        }
     }
     
     func update_percent(_ sender: Any) {
         // get default slider value, and set slider
         let default_index = defaults.integer(forKey: "defaultindex")
         tipControl.selectedSegmentIndex = default_index
+    }
+    
+    func update_theme(_ sender: Any) {
+        switch defaults.integer(forKey: "defaulttheme") {
+        case 0:
+            overrideUserInterfaceStyle = .unspecified
+        case 1:
+            overrideUserInterfaceStyle = .light
+        case 2:
+            overrideUserInterfaceStyle = .dark
+        default:
+            overrideUserInterfaceStyle = .unspecified
+        }
     }
     
     @IBAction func onTap(_ sender: Any) {
