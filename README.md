@@ -4,7 +4,7 @@ Tip Calculator is a tip calculator application for iOS.
 
 Submitted by: Zachary Yarost
 
-Time spent: 13.5 hours spent in total
+Time spent: 14 hours spent in total
 
 ## User Stories
 
@@ -33,15 +33,17 @@ The following **additional** features are implemented:
 
 ## Video Walkthrough
 
-Here's a walkthrough of implemented user stories:
+Here's a walkthrough of implimented tip application:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/r7BysM2' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+GIF created with [Gifski](https://apps.apple.com/us/app/gifski/id1351639930?mt=12).
 
 ## Notes
 
-This project was hugely helpful in getting a basic understanding of working with SwiftUI. While it only took an hour to impliment the basic app, I spent a sigificant amount of time understanding the different concepts involved with each additional change I made.
+This project was hugely helpful in getting a basic understanding of how to work with SwiftUI. While it only took an hour to impliment the basic app, I spent a sigificant amount of time understanding the different concepts involved with each additional change I made. I found it extremely enjoyable to work on this application, and it's got me thinking about what I'd like to work on next. Pointedly, I'd really like to dig into UI improvements, and learn about how to implement accesibility features; such as how to best format an app for a screen reader. 
+
+**Reguarding submission date:** I emailed Victoria Angulo reguarding the due date, and was told it would be alright for me to submit my app by this upcoming week of Aug 24th. I am submitting this app today, Aug 23rd. I did not have a machine for a few days, as I had to return a loaned MacBook Pro. I was able to purchase my own MacBook Pro as of the night of Aug 21st, and have spent the weekend working on this project.
 
 ## License
 
