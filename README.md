@@ -35,7 +35,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implimented tip application:
 
-<img src='https://imgur.com/a/r7BysM2' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://imgur.com/a/7RsPeqg' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [Gifski](https://apps.apple.com/us/app/gifski/id1351639930?mt=12).
 
