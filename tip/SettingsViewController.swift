@@ -25,7 +25,7 @@ class SettingsViewController: UIViewController {
         ThemeSlider(0)
         // Do any additional setup after loading the view.
     }
-    
+
     // The following function changes the color theme and saves it. I used:
     // https://www.youtube.com/watch?v=2WWUKsEPc1A as a guide.
     @IBAction func ThemeSlider(_ sender: Any) {
